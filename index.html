@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Stéphane Kouadio | IA Branding Creative</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Définition des variables de couleur et de la police pour le thème futuriste */
+    :root {
+      --bg-color: #0a0a14;
+      --primary-glow: #00f6ff;
+      --secondary-glow: #ff7f50;
+      --tertiary-glow: #9370db;
+      --text-color: #e0e0e0;
+      --panel-bg: rgba(15, 23, 42, 0.7);
+      --panel-border: rgba(0, 246, 255, 0.2);
+      --font-family: 'Exo', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+    }
+
+    /* Style pour le canvas en arrière-plan */
+    #background-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Utilisation des classes Tailwind pour les sections, mais en conservant les variables CSS pour le thème */
+    .section {
+      border: 1px solid var(--panel-border);
+      background-color: var(--panel-bg);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 25px var(--panel-border);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .section:hover {
+        box-shadow: 0 0 35px var(--primary-glow);
+        transform: translateY(-5px);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+    
+    h1 {
+        color: var(--primary-glow);
+        text-shadow: 0 0 10px var(--primary-glow);
+    }
+
+    h2 {
+        color: var(--text-color);
+        border-bottom: 2px solid var(--primary-glow);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    h3 {
+        color: var(--secondary-glow);
+    }
+
+    /* Style pour la photo de profil */
+    .profile-picture {
+        border: 3px solid var(--primary-glow);
+        box-shadow: 0 0 20px var(--primary-glow);
+        object-fit: cover; /* Assure que l'image remplit l'espace sans être déformée */
+    }
+
+    /* Style pour les liens et boutons pour une meilleure interaction */
+    a.linkedin-btn {
+        box-shadow: 0 0 15px var(--primary-glow);
+        transition: all 0.3s ease-in-out;
+    }
+
+    a.linkedin-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px var(--primary-glow);
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8">
+
+  <!-- Canvas pour l'animation d'arrière-plan -->
+  <canvas id="background-canvas"></canvas>
+
+  <!-- Conteneur principal pour s'assurer que le contenu est au-dessus du canvas -->
+  <main class="relative z-10 max-w-4xl mx-auto">
+
+    <header class="section rounded-2xl p-6 mb-8">
+      <div class="flex flex-col md:flex-row items-center text-center md:text-left">
+        <!-- PHOTO DE PROFIL : J'attends le code Base64 pour le coller ici -->
+        <img 
+          src="COLLEZ_VOTRE_NOUVEAU_CODE_BASE64_ICI" 
+          alt="Photo de Jean Stéphane Kouadio"
+          class="profile-picture w-32 h-32 md:w-40 md:h-40 rounded-full mb-6 md:mb-0 md:mr-8"
+        >
+        <!-- INFO TEXTE -->
+        <div class="flex-grow">
+          <h1 class="text-4xl md:text-5xl font-bold">Jean Stéphane Kouadio</h1>
+          <h2 class="text-xl md:text-2xl text-[var(--tertiary-glow)] mt-2 border-none">Digital Creative & IA Brander</h2>
+          <p class="mt-4 max-w-2xl mx-auto md:mx-0">Je crée des identités visuelles percutantes et créatives sur-mesure en m’appuyant sur l’IA générative.</p>
+          <a class="linkedin-btn inline-block mt-6 px-6 py-3 bg-[var(--primary-glow)] text-black rounded-lg font-bold" href="https://www.linkedin.com/posts/jean-stephane-kouadio_a-vfx-brand-designer-an-immersion-where-activity-7340651853807849472-QoUS" target="_blank">
+            🔗 Ma video de présentation IA
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <section class="section rounded-2xl p-6">
+            <h2 class="text-2xl">📞 Contact</h2>
+            <ul class="space-y-3 mt-4">
+                <li class="flex items-center">▶<strong class="w-24 ml-2">Adresse:</strong> <span>29 rue Marcel Houdet, Melun</span></li>
+                <li class="flex items-center">▶<strong class="w-24 ml-2">Mail:</strong> <span>kouadiojeanstphane05@gmail.com</span></li>
+                <li class="flex items-center">▶<strong class="w-24 ml-2">Téléphone:</strong> <span>06 68 13 49 46</span></li>
+            </ul>
+        </section>
+
+        <section class="section rounded-2xl p-6">
+            <h2 class="text-2xl">✨ Loisirs & Compétences Créatives</h2>
+            <ul class="space-y-2 mt-4">
+                <li>🔹 Montage expérimental IA + 3D</li>
+                <li>🔹 Exploration visuelle via Midjourney & Runway ML</li>
+                <li>🔹 Écriture de scénarios immersifs (Sci-Fi / IA)</li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="section rounded-2xl p-6 my-8">
+      <h2 class="text-2xl">💼 Expérience Professionnelle</h2>
+      <div class="space-y-6 mt-4">
+        <div>
+          <h3 class="text-xl">🎨 Animateur IA-Branding Digital</h3>
+          <p class="text-sm text-[var(--tertiary-glow)]"><em>Janvier 2025 - Présent</em></p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Création de visuels avec Midjourney / Stable Diffusion</li>
+            <li>Stratégies de branding IA pour pro et entreprises</li>
+            <li>Animations 2D/3D & VFX pour campagnes pub</li>
+            <li>Montage vidéo optimisé pour réseaux sociaux</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl">🎬 Cinéaste</h3>
+          <p class="text-sm text-[var(--tertiary-glow)]"><em>Mai 2017 - Présent</em></p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Réalisation de courts métrages & documentaires</li>
+            <li>Écriture de scénarios et storyboards détaillés</li>
+            <li>Gestion d’équipe technique (30 personnes)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl">🚄 Agent de Confort - Newrest</h3>
+          <p class="text-sm text-[var(--tertiary-glow)]"><em>Janvier 2021 - Janvier 2024</em></p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Accueil & service à bord des trains de nuit</li>
+            <li>Préparation couchettes, repas adaptés</li>
+            <li>Assistance et orientation des passagers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rounded-2xl p-6 mb-8">
+      <h2 class="text-2xl">🎓 Éducation</h2>
+      <div class="space-y-6 mt-4">
+        <div>
+          <h3 class="text-xl">🧠 Oreegami School (2024)</h3>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Formation IA Créatif & Chef de projet No-code</li>
+            <li>Brand Design IA (Midjourney, Runway, ChatGPT)</li>
+            <li>Création IA-first : images, vidéos, VFX IA</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl">🎬 Ecole de la Cité du Cinéma (2014-2016)</h3>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Mise en scène, scénario, narration visuelle</li>
+            <li>Production & montage audiovisuel</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl">🏫 Lycée Jean Moulin / Vincennes (2007)</h3>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Bac Pro Service Accueil</li>
+            <li>Communication client, logistique événementielle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // --- Script pour l'animation de l'arrière-plan ---
+
+    const canvas = document.getElementById('background-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let stars = [];
+    let numStars = 200; // Nombre d'étoiles
+
+    // Fonction pour initialiser ou réinitialiser la taille du canvas et les étoiles
+    function setup() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5 + 0.5, // Rayon aléatoire pour un effet de profondeur
+          vx: (Math.random() - 0.5) * 0.3, // Vitesse horizontale
+          vy: (Math.random() - 0.5) * 0.3  // Vitesse verticale
+        });
+      }
+    }
+
+    // Fonction pour dessiner les étoiles
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      ctx.fillStyle = 'white';
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    // Fonction pour mettre à jour la position des étoiles
+    function update() {
+      stars.forEach(star => {
+        star.x += star.vx;
+        star.y += star.vy;
+
+        // Si une étoile sort de l'écran, on la replace de l'autre côté
+        if (star.x < 0) star.x = canvas.width;
+        if (star.x > canvas.width) star.x = 0;
+        if (star.y < 0) star.y = canvas.height;
+        if (star.y > canvas.height) star.y = 0;
+      });
+    }
+
+    // Boucle d'animation
+    function animate() {
+      draw();
+      update();
+      requestAnimationFrame(animate);
+    }
+
+    // Gérer le redimensionnement de la fenêtre
+    window.addEventListener('resize', setup);
+
+    // Démarrage
+    setup();
+    animate();
+  </script>
+
+</body>
+</html>
+
